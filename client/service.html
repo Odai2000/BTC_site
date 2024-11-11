@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTC</title>
+    <link
+      rel="stylesheet"
+      href="./main.css"
+    />
+
+    <script src="./script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navBarInstance = new NavBar();
+        navBarInstance.render(document.getElementById("root"));
+
+        const b = document.getElementById("b-menu");
+        b.addEventListener("click", (e) => {
+          const nav = document.getElementById("nav");
+          nav.classList.toggle("m-toggled");
+          console.log(nav.classList);
+        });
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/4abb5fb3e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="service">
+        <div id="options-panel" class="tabs">
+          <div class="btn-group">
+            <button id="compress-tab-btn" class="tab active">Compress</button>
+            <button id="decompress-tab-btn" class="tab">Decompress</button>
+          </div>
+
+          <div id="compress-panel" class="card tab-panel active">
+            <form class="compress-form">
+              <h3>Choose a standard image or upload an image</h3>
+              <div class="standard-opt">
+                <div class="standard-imgs">
+                  <div id="lena" class="img-option">
+                    <img
+                      src="./res/std-imgs/lena.bmp"
+                      alt="lena"
+                    />
+                  </div>
+                  <div id="clown" class="img-option">
+                    <img
+                      src="./res/std-imgs/clown.bmp"
+                      alt="Cameraman"
+                    />
+                  </div>
+                  <div id="baboon" class="img-option">
+                    <img
+                      src="./res/std-imgs/Baboon.bmp"
+                      alt="Baboon"
+                    />
+                  </div>
+                  <div id="bridge" class="img-option">
+                    <img
+                      src="./res/std-imgs/bridge.bmp"
+                      alt="bridge"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="upload-opt">
+                <button class="btn" id="upload-image-btn" type="button">
+                  Upload image
+                </button>
+                <input type="file" id="image-input" style="display: none" />
+              </div>
+
+              <div id="selected-img" class="img-box box-shadow"></div>
+
+              <div id="setting-panel">
+                <h3 class="h-setting">Setting</h3>
+                <select name="block-size">
+                  <option value="4">4x4</option>
+                  <option value="8">8x8</option>
+                  <option value="16">16x16</option>
+                </select>
+                <select name="method">
+                  <option value="btc">Standard BTC</option>
+                  <option value="ambtc">AM-BTC</option>
+                  <option value="mmbtc">MM-BTC</option>
+                </select>
+                <button id="compress-btn" class="btn" type="submit">
+                  Compress
+                </button>
+                <button id="compare-btn" class="btn" type="button">
+                  Compare all techniques
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="decompress-panel" class="card tab-panel">
+            <h3>Decompress</h3>
+            <button class="btn" id="decompress-btn" type="button">
+              Decompress .btc file
+            </button>
+            <input type="file" id="file-input" style="display: none" />
+          </div>
+        </div>
+        <div id="result-panel" class="card">
+          <div id="loading">
+            Processing request.....
+          </div>
+          <div id="result-imgs"></div>
+          <table border="1px" cellspacing="0" id="result-data-table"></table>
+          <div id="download-btns" class="btn-group"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

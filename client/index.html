@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="main.css"
+    />
+    <title>BTC Compress - About</title>
+    <script src="./script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navBarInstance = new NavBar();
+        navBarInstance.render(document.getElementById("root"));
+
+        const b = document.getElementById("b-menu");
+        b.addEventListener("click", (e) => {
+          const nav = document.getElementById("nav");
+          nav.classList.toggle("m-toggled"); 
+          console.log(nav.classList);
+        });
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/4abb5fb3e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <div id="home">
+        <h1>BTC COMPRESSION</h1>
+        <div>
+          <img
+            src="./res/WelcomePagePhoto.jpg"
+          />
+        </div>
+        <div id="color-palette">
+          <div style="background-color:#486aea;"></div>
+          <div style="background-color:#00fff0;"></div>
+          <div style="background-color:#e9a625;"></div>
+        </div>
+        <div class="btn">Compress Now</div>
+      </div>
+    </div>
+  </body>
+</html>

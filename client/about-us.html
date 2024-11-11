@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="main.css"
+    />
+
+    <title>BTC Compress - About</title>
+    <script src="./script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navBarInstance = new NavBar();
+        navBarInstance.render(document.getElementById("root"));
+        
+          const b=document.getElementById("b-menu");
+  b.addEventListener("click", (e) => {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle("m-toggled");
+    console.log(nav.classList);
+})
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/4abb5fb3e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <div id="contact">
+        
+        <h2>Our Team</h2>
+        
+        <div class="card container">
+          <div class="profile-photo">
+            <img
+              src="./res/Abd.png"
+              alt=""
+            />
+          </div>
+          <div class="details">
+            <div class="name">E.Abd Al-Rahmannn</div>
+            <div class="bio">
+              <p>
+                As a skilled software developer with hands-on experience in both
+                software development and graphic design, my passion and fast
+                learning ability along with time management have abled me to
+                diverse my experience parallelly between software development
+                and graphic design. My studying of IT engineering has aided me
+                with academic static knowledge and problem-solving skills which
+                makes me a valuable versatile asset in any team.
+              </p>
+            </div>
+
+            <div class="icon-group social-group">
+              <div>
+                <a href="https://wa.me/966506703139?text=I%20have%20came%20from%20BTC%20Project%20to%20say%20(Your%20Feedback)"> <i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+              <div>
+                <a
+                  href="mailto:a.alhmwieh@gmail.com?subject=BTC%20Feedback&body=I%20came%20from%20the%20BTC%20Project%20to%20say%20"
+                  ><i class="fa-regular fa-envelope"></i>
+                </a>
+              </div>
+              <div>
+             <a href="https://www.linkedin.com/in/abdulrahman-alhmwieh-0a3551201/">   <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+         <div class="card container">
+            <div class="profile-photo">
+            <img
+              src="./res/odai.jpg"
+              alt=""
+            />
+          </div>
+          <div class="details">
+            <div class="name">Odai Abo Rasheed</div>
+            <div class="bio">
+              <p>
+               Odai is an Information Technology Engineering student specializing in artificial intelligence. He is passionate about machine learning and data analysis, with a solid foundation in web programming that he aims to expand. Eager to apply his knowledge in real-world projects, Odai stays updated on industry trends, making him a promising talent in the tech field.
+              </p>
+            </div>
+
+            <div class="icon-group social-group">
+              <div>
+                <a href="https://wa.me/963953284558?text=I%20have%20came%20from%20BTC%20Project%20to%20say%20(Your%20Feedback) "><i class="fa-brands fa-whatsapp"></i></a>
+                
+              </div>
+              <div>
+                <a
+                  href="mailto:odaiBoRasheed@outlook.com?subject=BTC%20Feedback&body=I%20came%20from%20the%20BTC%20Project%20to%20say%20"
+                  ><i class="fa-regular fa-envelope"></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://github.com/Odai2000"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </body>
+</html>

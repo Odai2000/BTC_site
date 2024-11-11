@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="main.css"
+    />
+    <title>BTC Compress - About</title>
+    <script src="./script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navBarInstance = new NavBar();
+        navBarInstance.render(document.getElementById("root"));
+        
+                  const b=document.getElementById("b-menu");
+  b.addEventListener("click", (e) => {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle("m-toggled"); 
+    console.log(nav.classList);})
+        
+      });
+    </script>   <script
+      src="https://kit.fontawesome.com/4abb5fb3e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <div id="about">
+        <div class="about-section card">
+          <h2>How it works?</h2>
+
+          <p>
+            Image compression is a fundamental technique in digital data
+            processing, aimed at reducing the data size of images while
+            maintaining their quality as much as possible. It plays a pivotal
+            role in enhancing storage efficiency and minimizing bandwidth
+            consumption when transmitting images over networks, enabling its
+            application across diverse fields—from mobile devices to large-scale
+            databases.
+          </p>
+
+          <p>
+            This project focuses on implementing grayscale image compression
+            techniques using Block Truncation Coding (BTC), an effective and
+            straightforward approach for balancing image quality and file size
+            after compression. The project examines various BTC applications,
+            including the standard BTC technique, as well as advanced methods
+            like AM-BTC and MM-BTC. Each technique is analyzed and evaluated in
+            terms of compression quality and speed.
+          </p>
+
+          <p>
+            A new .btc file format has been developed as part of the project to
+            store the binary representation of compressed images, significantly
+            reducing file size. Additionally, a program was developed to
+            decompress .btc files and reconstruct the original image with
+            manageable data loss, achieving an optimal balance between quality
+            retention and minimized storage requirements. This solution provides
+            users with a practical and efficient way to store and manage images.
+          </p>
+
+          <p>
+            Moreover, the project includes a web-based system that allows users
+            to access image compression and decompression services efficiently
+            and conveniently. This study aims to provide a comprehensive
+            overview of the effectiveness of BTC techniques for grayscale
+            images, evaluating compression results based on technical metrics
+            such as Compression Ratio (CR), Structural Similarity Index (SSIM),
+            and Peak Signal-to-Noise Ratio (PSNR). This insight enriches the
+            understanding of BTC applications in digital image processing and
+            brings image compression services directly to users through an
+            accessible online platform.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
